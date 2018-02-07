@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springboot.salespersonservice.model.SalesPerson;
@@ -15,8 +15,8 @@ public class SalesPersonServiceController {
 
 	@Autowired SalesPersonService salesPersonService;
 	
-	@GetMapping("/salespersons/v1/{sortBy}")
-	public List<SalesPerson> getSalesPerson(@PathVariable String sortBy){
+	@GetMapping("/salespersons/v1")
+	public List<SalesPerson> getSalesPerson(@RequestParam("sortBy") String sortBy){
 		return salesPersonService.getSalesPerson(sortBy);
 	}
 }

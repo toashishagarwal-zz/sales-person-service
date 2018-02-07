@@ -2,16 +2,16 @@
 
 I)REST end points are -
 1) GET sales persons sorted by id
-http://localhost:8080/salespersons/v1/id
+http://localhost:8080/salespersons/v1?sortBy=id
 
 2) GET sales persons sorted by Name
-http://localhost:8080/salespersons/v1/name
+http://localhost:8080/salespersons/v1?sortBy=name
 
 3) GET sales persons sorted by product
-http://localhost:8080/salespersons/v1/product
+http://localhost:8080/salespersons/v1?sortBy=product
 
 4) GET sales persons sorted by location
-http://localhost:8080/salespersons/v1/location
+http://localhost:8080/salespersons/v1?sortBy=location
 
 II) For the sake of simplicity, I have pushed the log statements to console I/O.
 In real world projects, I will configure log4j and push the logs there
