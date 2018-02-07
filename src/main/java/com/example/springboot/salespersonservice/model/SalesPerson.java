@@ -1,5 +1,7 @@
 package com.example.springboot.salespersonservice.model;
 
+import java.util.StringJoiner;
+
 public class SalesPerson {
 	private Integer id;
 	private String name;
@@ -78,5 +80,16 @@ public class SalesPerson {
 		} else if (!product.equals(other.product))
 			return false;
 		return true;
+	}
+	
+	@Override
+	public String toString() {
+		StringJoiner joiner = new StringJoiner(",");
+		joiner.add(""+id);
+		joiner.add(name);
+		joiner.add(product);
+		joiner.add(location);
+		
+		return new String("("+ joiner.toString()+")");
 	}
 }
