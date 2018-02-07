@@ -15,7 +15,7 @@ public class SalesPersonServiceController {
 
 	@Autowired SalesPersonService salesPersonService;
 	
-	@GetMapping("/salespersons/{sortBy}")
+	@GetMapping("/salespersons/v1/{sortBy}")
 	public List<SalesPerson> getSalesPerson(@PathVariable String sortBy){
 		return salesPersonService.getSalesPerson(sortBy);
 	}
